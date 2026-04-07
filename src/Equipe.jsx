@@ -2,6 +2,7 @@ import React from 'react';
 import felipePaiva from './assets/imgs/felipe_paiva.jpg';
 import thais from './assets/imgs/Thais.jpg';
 import giovani22 from './assets/imgs/giovani22.jpg';
+import alvaro from './assets/imgs/Alvaro.jpg';
 
 function Equipe() {
   const membros = [
@@ -32,9 +33,9 @@ function Equipe() {
         'Formado em ADS pelo SENAI, com base em programação. Atualmente estudando Java e Estrutura de Dados. Ainda no início da carreira, mas com aprendizado rápido e muita vontade de evoluir.',
     },
     {
-      nome: 'Mariana Costa',
-      img: felipePaiva,
-      alt: 'Foto de Mariana Costa',
+      nome: 'Alvaro Morais',
+      img: alvaro,
+      alt: 'Foto de Alvaro Morais',
       href: 'https://www.instagram.com/devfelipekinder/',
       texto:
         'Responsável pela estratégia de conteúdo e integração entre equipe técnica e clientes do agro.',
