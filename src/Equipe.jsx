@@ -1,41 +1,116 @@
 import React from 'react';
 import felipePaiva from './assets/imgs/felipe_paiva.jpg';
+import thais from './assets/imgs/Thais.jpg';
 
-function Equipe({ voltar }) {
+function Equipe() {
   const membros = [
     {
-      id: 1,
       nome: 'Felipe Paiva',
-      cargo: '💻 Desenvolvedor Full Stack em Transição',
-      foto: felipePaiva,
-      descricao: 'Profissional com sólida experiência em vendas e em transição para a área de tecnologia. Possui conhecimentos em JavaScript, React, Node.js, HTML e CSS, com foco no desenvolvimento de aplicações modernas, responsivas e intuitivas. Apaixonado por resolver problemas, aprender continuamente e transformar ideias em soluções reais através do código.'
-    }
+      img: felipePaiva,
+      alt: 'Foto de Felipe',
+      href: 'https://www.instagram.com/devfelipekinder/',
+      texto:
+        'Atua com visão empreendedora, desenvolvimento full stack e interesse forte em cibersegurança e inovação.',
+    },
+    {
+      nome: 'Thais',
+      img: thais,
+      alt: 'Foto de Thais',
+      href: 'https://www.instagram.com/devfelipekinder/',
+      texto:
+        'Especialista em UX/UI e comunicação visual, focada em deixar a experiência do usuário clara e moderna.',
+    },
+    {
+      nome: 'Lucas Mendes',
+      img: felipePaiva,
+      alt: 'Foto de Lucas Mendes',
+      href: 'https://www.instagram.com/devfelipekinder/',
+      texto:
+        'Engenheiro de dados com habilidade em análise de resultados e construção de dashboards inteligentes.',
+    },
+    {
+      nome: 'Mariana Costa',
+      img: felipePaiva,
+      alt: 'Foto de Mariana Costa',
+      href: 'https://www.instagram.com/devfelipekinder/',
+      texto:
+        'Responsável pela estratégia de conteúdo e integração entre equipe técnica e clientes do agro.',
+    },
+  ];
+
+  const values = [
+    'Inovação com propósito',
+    'Clareza na comunicação',
+    'Colaboração entre áreas',
+    'Tecnologia com impacto social',
   ];
 
   return (
-    <div className="pagina-equipe">
-      <div className="equipe-header">
-        <h1>Nossa Equipe</h1>
-        <p className="equipe-intro">Conheça os profissionais por trás da AgroSense</p>
-      </div>
+    <section className="page-shell pagina-equipe">
+      <div className="site-container">
+        <div className="page-heading premium-heading">
+          <h1>Sobre o projeto e a equipe</h1>
+          <p>
+            Unimos tecnologia, pesquisa e visão de negócio para mostrar como o agro
+            pode evoluir com inovação aplicada.
+          </p>
+        </div>
 
-      <div className="equipe-container">
-        <div className="equipe-cards">
-          {membros.map((membro) => (
-            <div key={membro.id} className="membro-card">
-              <div className="membro-foto">
-                <img src={membro.foto} alt={membro.nome} />
-              </div>
-              <div className="membro-info">
-                <h4 className="membro-nome">{membro.nome}</h4>
-                <h3 className="membro-cargo">{membro.cargo}</h3>
-                <p className="membro-descricao">{membro.descricao}</p>
-              </div>
-            </div>
+        <div className="about-hero-grid">
+          <div className="card-panel about-feature">
+            <h3>Nossa missão</h3>
+            <p>
+              Demonstrar como soluções tecnológicas podem elevar a produtividade rural,
+              reduzir desperdícios e fortalecer a segurança alimentar no Brasil.
+            </p>
+          </div>
+
+          <div className="card-panel about-feature">
+            <h3>Nossa visão</h3>
+            <p>
+              Contribuir para um agronegócio mais moderno, eficiente e orientado por dados,
+              aproximando inovação e impacto positivo na sociedade.
+            </p>
+          </div>
+        </div>
+
+        <div className="values-panel">
+          {values.map((value) => (
+            <article className="value-chip" key={value}>
+              {value}
+            </article>
           ))}
         </div>
+
+        <div className="card-grid members-grid">
+          {membros.map((membro) => {
+            const content = (
+              <article className="member-card premium-member-card">
+                <img src={membro.img} alt={membro.alt} />
+                <div className="member-card-body">
+                  <h3>{membro.nome}</h3>
+                  <p>{membro.texto}</p>
+                </div>
+              </article>
+            );
+
+            return membro.href ? (
+              <a
+                key={membro.nome}
+                href={membro.href}
+                target="_blank"
+                rel="noreferrer"
+                className="member-link"
+              >
+                {content}
+              </a>
+            ) : (
+              <div key={membro.nome}>{content}</div>
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
