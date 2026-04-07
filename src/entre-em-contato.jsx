@@ -38,9 +38,6 @@ function Contato({ voltar }) {
       <header className="logo">
         <img src={logo} alt="AgroSense" />
         <h1>Tecnologias que facilitam.</h1>
-        <button onClick={voltar} className="btn-home-flutuante">
-          Home
-        </button>
       </header>
 
       <div className="contato">

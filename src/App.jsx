@@ -1,41 +1,14 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import './assets/css/styles.css';
-import imgEquipe from './assets/imgs/imagem_card_equipe.jpg';
-import imgProjeto from './assets/imgs/img-projeto-2.jpg';
+import Header from './Header';
 import AdminPanel from './AdminPanel';
 import Contato from './entre-em-contato';
+import Sobre from './Sobre';
+import Equipe from './Equipe';
+import TecnologiasAgronegocios from './TecnologiasAgronegocios';
 
-// 1. COMPONENTE CARD
-function Card({ imagem, alt, resumo, detalhes }) {
-  const [aberto, setAberto] = useState(false);
-  const [mostrar, setMostrar] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setMostrar(true);
-    }, 50);
-    return () => clearTimeout(timer);
-  }, []);
-
-  return (
-    <div className={`card-item ${mostrar ? 'card-fade-in' : ''}`}>
-       <img src={imagem} alt={alt} />
-       <p>{resumo}</p>
-       <button className="btn" onClick={() => setAberto(!aberto)}>
-         {aberto ? 'Ver menos' : 'Saiba mais'}
-       </button>
-       
-       {aberto && (
-         <div className="expansao-card">
-           <p>{detalhes}</p>
-         </div>
-       )}
-    </div>
-  );
-}
-
-// 2. COMPONENTE PRINCIPAL APP 
+// COMPONENTE PRINCIPAL APP 
 function App() {
   const [telaAtiva, setTelaAtiva] = useState('home');
   const [darkMode, setDarkMode] = useState(() => {
@@ -60,73 +33,41 @@ function App() {
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      <button 
-        id="toggle-dark-mode" 
-        onClick={toggleDarkMode}
-        className="btn-tema-flutuante"
-      >
-        {darkMode ? 'Modo Claro' : 'Modo Escuro'}
-      </button>
+      {/* Mostra Header em todas as páginas exceto Admin */}
+      {telaAtiva !== 'admin' && (
+        <Header 
+          telaAtiva={telaAtiva}
+          setTelaAtiva={setTelaAtiva}
+          onToggleDarkMode={toggleDarkMode}
+          darkMode={darkMode}
+          onAdmin={entrarNoAdmin}
+        />
+      )}
 
-      <button 
-        onClick={entrarNoAdmin}
-        className="btn-admin-secreto"
-      >
-        ⚙️
-      </button>
-
-      {/* Início da Lógica de Telas */}
+      {/* Lógica de Telas */}
       {telaAtiva === 'admin' ? (
         <AdminPanel voltar={() => setTelaAtiva('home')} />
       ) : (
         <>
-          {telaAtiva === 'home' ? (
+          {telaAtiva === 'home' && (
             <>
               <div className="hero">
                 <h1 className="hero-title">Tecnologias que facilitam</h1>
                 <p className="hero-text">Trazendo melhorias para o seu negócio.</p>
                 <button className="btn" onClick={() => setTelaAtiva('contato')}>Fale com a gente</button>
               </div>
-
-              <div className="cards">
-                <Card 
-                  imagem={imgEquipe} 
-                  alt="Equipe"
-                  resumo="Conheça a equipe responsável pelo projeto."
-                  detalhes="A equipe é formada por Álvaro Miguel, Giovani Barbosa, e Thais Verdi Bona."
-                />
-                <Card 
-                  imagem={imgProjeto} 
-                  alt="Projeto"
-                  resumo="Conheça o nosso projeto."
-                  detalhes="Protótipo funcional utilizando React para o agronegócio."
-                />
-              
-                <div className="card-item card-fade-in">
-                  <div className="video-responsive">
-                    <iframe 
-                      src="https://www.youtube.com/embed/62hPyAqRkz8?si=2rEjE-oGFC-VIJcv" 
-                      title="YouTube video player" 
-                      frameBorder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                      referrerPolicy="strict-origin-when-cross-origin" 
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-                  <p className="video-caption">Assista a nossa apresentação do projeto.</p>
-                </div>
-
-              </div>
+              <TecnologiasAgronegocios />
             </>
-          ) : (
-            <Contato voltar={() => setTelaAtiva('home')} />
           )}
+
+          {telaAtiva === 'sobre' && <Sobre voltar={() => setTelaAtiva('home')} />}
+
+          {telaAtiva === 'equipe' && <Equipe voltar={() => setTelaAtiva('home')} />}
+
+          {telaAtiva === 'contato' && <Contato voltar={() => setTelaAtiva('home')} />}
 
           <footer className="site-footer">
             <p className="footer-copyright">© 2026 AgroSense - Tecnologia Agrícola</p>
-            <button onClick={entrarNoAdmin} className="btn-admin-link">
-              Área Administrativa (Restrito)
-            </button>
           </footer>
         </>
       )}
