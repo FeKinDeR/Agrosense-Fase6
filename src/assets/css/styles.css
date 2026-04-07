@@ -39,6 +39,8 @@
 .light-mode, .dark-mode {
     min-height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-light);
     color: var(--color-dark);
     transition: background-color var(--transition), color var(--transition);

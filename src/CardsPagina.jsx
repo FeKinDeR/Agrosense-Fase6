@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 
-function CardsPagina({ cards, cardsPerPage = 3 }) {
+function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
   const [paginaAtual, setPaginaAtual] = useState(1);
 
   // Calcula o total de páginas
@@ -69,9 +69,9 @@ function CardsPagina({ cards, cardsPerPage = 3 }) {
         </div>
       )}
 
-      <div className="info-paginacao">
+      {mostrarInfoPaginacao && <div className="info-paginacao">
         <p>Página {paginaAtual} de {totalPaginas}</p>
-      </div>
+      </div>}
     </div>
   );
 }

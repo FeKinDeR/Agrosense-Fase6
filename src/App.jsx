@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import './assets/css/styles.css';
 import Header from './Header';
+import Footer from './Footer';
 import AdminPanel from './AdminPanel';
 import Contato from './entre-em-contato';
 import Sobre from './Sobre';
 import Equipe from './Equipe';
 import TecnologiasAgronegocios from './TecnologiasAgronegocios';
 
-// COMPONENTE PRINCIPAL APP 
+// COMPONENTE PRINCIPAL APP
 function App() {
   const [telaAtiva, setTelaAtiva] = useState('home');
   const [darkMode, setDarkMode] = useState(() => {
@@ -23,19 +24,18 @@ function App() {
   const toggleDarkMode = () => setDarkMode(!darkMode);
 
   const entrarNoAdmin = () => {
-    const senha = prompt("Digite a senha de administrador:");
-    if (senha === "1234") {
+    const senha = prompt('Digite a senha de administrador:');
+    if (senha === '1234') {
       setTelaAtiva('admin');
     } else {
-      alert("Acesso Negado!");
+      alert('Acesso Negado!');
     }
   };
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      {/* Mostra Header em todas as páginas exceto Admin */}
       {telaAtiva !== 'admin' && (
-        <Header 
+        <Header
           telaAtiva={telaAtiva}
           setTelaAtiva={setTelaAtiva}
           onToggleDarkMode={toggleDarkMode}
@@ -44,7 +44,6 @@ function App() {
         />
       )}
 
-      {/* Lógica de Telas */}
       {telaAtiva === 'admin' ? (
         <AdminPanel voltar={() => setTelaAtiva('home')} />
       ) : (
@@ -53,8 +52,10 @@ function App() {
             <>
               <div className="hero">
                 <h1 className="hero-title">Tecnologias que facilitam</h1>
-                <p className="hero-text">Trazendo melhorias para o seu negócio.</p>
-                <button className="btn" onClick={() => setTelaAtiva('contato')}>Fale com a gente</button>
+                <p className="hero-text">Trazendo melhorias para o seu negocio.</p>
+                <button className="btn" onClick={() => setTelaAtiva('contato')}>
+                  Fale com a gente
+                </button>
               </div>
               <TecnologiasAgronegocios />
             </>
@@ -66,9 +67,7 @@ function App() {
 
           {telaAtiva === 'contato' && <Contato voltar={() => setTelaAtiva('home')} />}
 
-          <footer className="site-footer">
-            <p className="footer-copyright">© 2026 AgroSense - Tecnologia Agrícola</p>
-          </footer>
+          <Footer setTelaAtiva={setTelaAtiva} />
         </>
       )}
     </div>

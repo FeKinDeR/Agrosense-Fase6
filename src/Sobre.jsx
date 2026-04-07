@@ -22,12 +22,6 @@ function Sobre({ voltar }) {
       alt: "Missão",
       resumo: "Nossa missão.",
       detalhes: "Trazer tecnologia inovadora para transformar o agronegócio brasileiro."
-    },
-    {
-      imagem: imgProjeto,
-      alt: "Visão",
-      resumo: "Nossa visão.",
-      detalhes: "Ser referência em soluções tecnológicas para o setor agrícola."
     }
   ];
 
@@ -38,7 +32,7 @@ function Sobre({ voltar }) {
         <p className="sobre-intro">Conheça mais sobre nosso projeto e equipe</p>
       </div>
 
-      <CardsPagina cards={cardsData} cardsPerPage={3} />
+      <CardsPagina cards={cardsData} cardsPerPage={3} mostrarInfoPaginacao={false} />
 
       <div className="video-section">
         <h2>Nossa Apresentação</h2>
