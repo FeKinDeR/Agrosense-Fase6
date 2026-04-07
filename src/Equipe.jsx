@@ -36,9 +36,9 @@ function Equipe() {
       nome: 'Alvaro Morais',
       img: alvaro,
       alt: 'Foto de Alvaro Morais',
-      href: 'https://www.instagram.com/devfelipekinder/',
+      href: 'https://www.instagram.com/alvaromiguel_007/',
       texto:
-        'Responsável pela estratégia de conteúdo e integração entre equipe técnica e clientes do agro.',
+        'Graduando em Engenharia de Software pela FIAP e técnico de informática pelo SENAC, foco no desenvolvimento de sistemas com Python, C# e JavaScript. Contando com inglês avançado para colaboração em projetos globais e acesso a tecnologias de ponta.',
     },
   ];
 
