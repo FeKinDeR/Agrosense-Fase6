@@ -12,7 +12,7 @@ function Equipe() {
       alt: 'Foto de Felipe',
       href: 'https://www.instagram.com/devfelipekinder/',
       texto:
-        'Atua com visão empreendedora, desenvolvimento full stack e interesse forte em cibersegurança e inovação.',
+        'Desenvolvedor Full Stack, Hacker White Hat focado em segurança digital Autalmente estudante de Engenharia de Software na FIAP.',
     },
     {
       nome: 'Thais Verdi Bona',
