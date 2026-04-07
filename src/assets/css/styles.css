@@ -7,7 +7,7 @@
     --transition: .5s;
     --color-error: #d32f2f;
     --bg-error: rgba(211, 47, 47, 0.05);
-    --url-hero-bg: url(../imgs/plantação.jpg);
+    --url-hero-bg: url(../imgs/tecnologia-no-campo.jpg);
 }
 
 .dark-mode {
@@ -18,7 +18,7 @@
     --color-medium: #2a6963;
     --color-error: #f44336;
     --bg-error: rgba(255, 107, 107, 0.2);
-    --url-hero-bg: url(../imgs/plantação.jpg);
+    --url-hero-bg: url(../imgs/tecnologia-no-campo.jpg);
     background-color: var(--color-light);
     color: var(--color-dark)
 }
@@ -184,7 +184,7 @@ body{
 }
 
 .pagina-contato .logo {
-    padding: 30px 20px;
+    padding: 20px 20px 10px;
     text-align: center;
     border-bottom: 2px solid var(--color-green-light);
 }
@@ -215,7 +215,7 @@ body{
     align-items: center;
     color: var(--color-dark);
     width: 100%;
-    padding: 60px 20px;
+    padding: 28px 20px 60px;
     flex-grow: 1;
 }
 
@@ -1102,6 +1102,14 @@ textarea {
     display: block;
 }
 
+.member-card img.member-image-giovani {
+    object-position: center 18%;
+}
+
+.member-card img.member-image-thais {
+    object-position: center 22%;
+}
+
 .member-card-body {
     padding: 24px;
     display: flex;
@@ -1331,7 +1339,7 @@ textarea {
     }
 
     .contato {
-        padding: 40px 15px;
+        padding: 24px 15px 40px;
     }
 }
 
@@ -1493,7 +1501,7 @@ textarea {
     }
 
     .pagina-contato .logo {
-        padding: 20px 10px;
+        padding: 16px 10px 8px;
     }
 
     .pagina-contato .logo img {
@@ -1505,7 +1513,7 @@ textarea {
     }
 
     .contato {
-        padding: 30px 10px;
+        padding: 18px 10px 30px;
     }
 
     .contato-title {
@@ -1759,3 +1767,5 @@ textarea {
         font-size: 0.85rem;
     }
 }
+
+

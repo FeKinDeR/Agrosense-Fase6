@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-function Card({ imagem, alt, resumo, detalhes }) {
+function Card({ imagem, alt, resumo, detalhes, onSaibaMais }) {
   const [aberto, setAberto] = useState(false);
   const [mostrar, setMostrar] = useState(false);
 
@@ -11,11 +11,20 @@ function Card({ imagem, alt, resumo, detalhes }) {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleSaibaMais = () => {
+    if (onSaibaMais) {
+      onSaibaMais();
+      return;
+    }
+
+    setAberto(!aberto);
+  };
+
   return (
     <div className={`card-item ${mostrar ? 'card-fade-in' : ''}`}>
       <img src={imagem} alt={alt} />
       <p>{resumo}</p>
-      <button className="btn" onClick={() => setAberto(!aberto)}>
+      <button className="btn" onClick={handleSaibaMais}>
         {aberto ? 'Ver menos' : 'Saiba mais'}
       </button>
       

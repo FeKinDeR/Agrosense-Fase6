@@ -33,6 +33,7 @@ function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
             alt={card.alt}
             resumo={card.resumo}
             detalhes={card.detalhes}
+            onSaibaMais={card.onSaibaMais}
           />
         ))}
       </div>

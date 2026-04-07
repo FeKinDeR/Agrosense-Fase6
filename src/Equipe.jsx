@@ -1,6 +1,7 @@
 import React from 'react';
 import felipePaiva from './assets/imgs/felipe_paiva.jpg';
 import thais from './assets/imgs/Thais.jpg';
+import giovani22 from './assets/imgs/giovani22.jpg';
 
 function Equipe() {
   const membros = [
@@ -13,20 +14,22 @@ function Equipe() {
         'Atua com visão empreendedora, desenvolvimento full stack e interesse forte em cibersegurança e inovação.',
     },
     {
-      nome: 'Thais',
+      nome: 'Thais Verdi Bona',
       img: thais,
-      alt: 'Foto de Thais',
+      alt: 'Foto de Thais Verdi Bona',
+      imageClassName: 'member-image-thais',
       href: 'https://www.instagram.com/devfelipekinder/',
       texto:
         'Especialista em UX/UI e comunicação visual, focada em deixar a experiência do usuário clara e moderna.',
     },
     {
-      nome: 'Lucas Mendes',
-      img: felipePaiva,
-      alt: 'Foto de Lucas Mendes',
+      nome: 'Giovani Barbosa',
+      img: giovani22,
+      alt: 'Foto de Giovani Barbosa',
+      imageClassName: 'member-image-giovani',
       href: 'https://www.instagram.com/devfelipekinder/',
       texto:
-        'Engenheiro de dados com habilidade em análise de resultados e construção de dashboards inteligentes.',
+        'Formado em ADS pelo SENAI, com base em programação. Atualmente estudando Java e Estrutura de Dados. Ainda no início da carreira, mas com aprendizado rápido e muita vontade de evoluir.',
     },
     {
       nome: 'Mariana Costa',
@@ -86,7 +89,7 @@ function Equipe() {
           {membros.map((membro) => {
             const content = (
               <article className="member-card premium-member-card">
-                <img src={membro.img} alt={membro.alt} />
+                <img src={membro.img} alt={membro.alt} className={membro.imageClassName} />
                 <div className="member-card-body">
                   <h3>{membro.nome}</h3>
                   <p>{membro.texto}</p>

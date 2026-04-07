@@ -61,7 +61,12 @@ function App() {
             </>
           )}
 
-          {telaAtiva === 'sobre' && <Sobre voltar={() => setTelaAtiva('home')} />}
+          {telaAtiva === 'sobre' && (
+            <Sobre
+              voltar={() => setTelaAtiva('home')}
+              irParaEquipe={() => setTelaAtiva('equipe')}
+            />
+          )}
 
           {telaAtiva === 'equipe' && <Equipe voltar={() => setTelaAtiva('home')} />}
 

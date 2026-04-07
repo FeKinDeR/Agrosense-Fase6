@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; 
-import logo from './assets/imgs/logo_sem_fundo.png'; 
 
 function Contato({ voltar }) {
   const initialState = { nome: '', sobrenome: '', email: '', mensagem: '' };
@@ -35,11 +34,6 @@ function Contato({ voltar }) {
 
   return (
     <div className="pagina-contato">
-      <header className="logo">
-        <img src={logo} alt="AgroSense" />
-        <h1>Tecnologias que facilitam.</h1>
-      </header>
-
       <div className="contato">
         <h3 className="contato-title">Entre em contato conosco.</h3>
         <p className="contato-text">Preencha o formulário abaixo com a sua mensagem.</p>
