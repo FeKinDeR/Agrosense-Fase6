@@ -1,0 +1,115 @@
+classDiagram
+direction LR
+
+class Main {
+  <<entrypoint>>
+  createRoot()
+  render(App)
+}
+
+class App {
+  <<controller>>
+  +telaAtiva
+  +isLogged
+  +darkMode
+  +handleLoginSucesso()
+  +handleLogout()
+  +toggleDarkMode()
+  +entrarNoAdmin()
+}
+
+class Header {
+  <<component>>
+  +telaAtiva
+  +setTelaAtiva()
+  +onToggleDarkMode()
+  +onAdmin()
+}
+
+class Footer {
+  <<component>>
+  +setTelaAtiva()
+}
+
+class MenuPerfil {
+  <<component>>
+  +isLogged
+  +onLogout()
+  +setTelaAtiva()
+}
+
+class Login {
+  <<page>>
+  +onLogin()
+  +voltar()
+}
+
+class Dashboard {
+  <<page>>
+  +telemetria
+}
+
+class Contato {
+  <<page>>
+  +formData
+  +erros
+  +handleSubmit()
+}
+
+class AdminPanel {
+  <<page>>
+  +mensagens
+  +excluirMsg()
+}
+
+class Sobre {
+  <<page>>
+  +cardsData
+}
+
+class CardsPagina {
+  <<component>>
+  +paginaAtual
+  +cardsPerPage
+}
+
+class Card {
+  <<component>>
+  +aberto
+  +mostrar
+}
+
+class Equipe {
+  <<page>>
+  +membros
+  +values
+}
+
+class TecnologiasAgronegocios {
+  <<page>>
+  +tecnologias
+}
+
+class LocalStorage {
+  <<browser storage>>
+  +darkMode
+  +isLogged
+  +mensagens
+}
+
+Main --> App : renderiza
+App --> Header : compoe
+App --> Footer : compoe
+App --> Login : roteia
+App --> Dashboard : roteia
+App --> Contato : roteia
+App --> AdminPanel : roteia
+App --> Sobre : roteia
+App --> Equipe : roteia
+App --> TecnologiasAgronegocios : roteia
+Header --> MenuPerfil : exibe se logado
+Sobre --> CardsPagina : utiliza
+CardsPagina --> Card : pagina
+App --> LocalStorage : darkMode/isLogged
+Contato --> LocalStorage : grava mensagens
+AdminPanel --> LocalStorage : le/remove mensagens

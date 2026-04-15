@@ -1,0 +1,642 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Length 8263 >>
+stream
+1 w
+0.96 0.98 0.98 RG
+0.96 0.98 0.98 rg
+0 0 842 595 re B
+1 w
+0.84 0.90 0.89 RG
+1 1 1 rg
+28 515 786 62 re B
+BT
+/F2 21 Tf
+0.05 0.46 0.47 rg
+44 551 Td
+(AgroSense - UML de Componentes) Tj
+ET
+BT
+/F1 10.50 Tf
+0.32 0.40 0.43 rg
+44 531 Td
+(Arquitetura do frontend React e seus fluxos principais) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+500 531 Td
+(Projeto analisado em 2026-04-15 | Gerado automaticamente a partir da estrutura atual) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+40 407 160 78 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+40 457 160 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+52 467 Td
+(main.jsx) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+52 446 Td
+(Ponto de entrada) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 427 Td
+(- Renderiza App dentro de) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 414.50 Td
+(StrictMode) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 413 Td
+(- Inicializa React DOM no) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 400.50 Td
+(elemento root) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+245 335 240 160 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+245 467 240 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+257 477 Td
+(App.jsx) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+257 456 Td
+(Orquestrador central) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 437 Td
+(- Gerencia telaAtiva, isLogged e darkMode) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 423 Td
+(- Decide qual pagina renderizar) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 409 Td
+(- Persiste darkMode e isLogged no) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 396.50 Td
+(localStorage) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 395 Td
+(- Coordena Header, Footer, Login,) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+259 382.50 Td
+(Dashboard e demais telas) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+530 372 250 118 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+530 462 250 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+542 472 Td
+(Header.jsx) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+542 451 Td
+(Navegacao superior) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 432 Td
+(- Recebe estado da tela ativa) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 418 Td
+(- Dispara navegacao e troca de tema) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 404 Td
+(- Exibe MenuPerfil quando usuario esta) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 391.50 Td
+(logado) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+530 255 250 95 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+530 322 250 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+542 332 Td
+(Footer.jsx) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+542 311 Td
+(Navegacao inferior) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 292 Td
+(- Oferece atalhos para telas institucionais) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 278 Td
+(- Reutiliza setTelaAtiva enviado por App) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+530 125 250 110 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+530 207 250 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+542 217 Td
+(MenuPerfil.jsx) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+542 196 Td
+(Menu contextual do usuario) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 177 Td
+(- Controla dropdown local) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 163 Td
+(- Encaminha logout e troca de tela) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+544 149 Td
+(- Depende do estado isLogged vindo do App) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+235 60 260 235 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+235 267 260 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+247 277 Td
+(Paginas de dominio) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+247 256 Td
+(Renderizacao condicional em App) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 237 Td
+(- Login.jsx -> autentica localmente e aciona) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 224.50 Td
+(onLogin) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 223 Td
+(- Dashboard.jsx -> mostra telemetria simulada) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 209 Td
+(- Contato.jsx -> valida formulario e grava) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 196.50 Td
+(mensagens) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 195 Td
+(- AdminPanel.jsx -> lista e remove mensagens) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 182.50 Td
+(salvas) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 181 Td
+(- Equipe.jsx -> mostra membros e valores do) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 168.50 Td
+(projeto) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 167 Td
+(- TecnologiasAgronegocios.jsx -> vitrine de) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+249 154.50 Td
+(tecnologias) Tj
+ET
+1.10 w
+0.49 0.65 0.65 RG
+1 1 1 rg
+40 120 160 175 re B
+1.10 w
+0.49 0.65 0.65 RG
+0.87 0.93 0.93 rg
+40 267 160 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+52 277 Td
+(Fluxo Sobre) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+52 256 Td
+(Composicao interna) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 237 Td
+(- Sobre.jsx monta) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 224.50 Td
+(cardsData) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 223 Td
+(- CardsPagina.jsx pagina) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 210.50 Td
+(colecao) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 209 Td
+(- Card.jsx expande) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 196.50 Td
+(detalhes e aciona) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 184 Td
+(callbacks) Tj
+ET
+1.10 w
+0.62 0.73 0.89 RG
+0.93 0.96 1 rg
+40 37 740 58 re B
+1.10 w
+0.62 0.73 0.89 RG
+0.86 0.91 0.98 rg
+40 67 740 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+52 77 Td
+(Persistencia no navegador) Tj
+ET
+BT
+/F1 9 Tf
+0.32 0.40 0.43 rg
+52 56 Td
+(Dependencias externas do frontend) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 37 Td
+(- localStorage.darkMode e localStorage.isLogged sao lidos por App.jsx) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+54 23 Td
+(- localStorage.mensagens e compartilhado entre Contato.jsx e AdminPanel.jsx) Tj
+ET
+1.10 w
+0.84 0.75 0.42 RG
+1 0.96 0.87 rg
+620 50 160 55 re B
+1.10 w
+0.84 0.75 0.42 RG
+1 0.94 0.74 rg
+620 77 160 28 re B
+BT
+/F2 13 Tf
+0.05 0.46 0.47 rg
+632 87 Td
+(Observacao) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+634 61 Td
+(- Cards.js parece legado e) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+634 48.50 Td
+(nao e importado pelo fluxo) Tj
+ET
+BT
+/F1 9.50 Tf
+0.09 0.20 0.23 rg
+634 36 Td
+(atual) Tj
+ET
+1.50 w
+0.05 0.46 0.47 RG
+200 446 m 245 446 l S
+1.50 w
+0.05 0.46 0.47 RG
+245 446 m 237.79 442.53 l S
+1.50 w
+0.05 0.46 0.47 RG
+245 446 m 237.79 449.47 l S
+1.50 w
+0.05 0.46 0.47 RG
+485 450 m 530 450 l S
+1.50 w
+0.05 0.46 0.47 RG
+530 450 m 522.79 446.53 l S
+1.50 w
+0.05 0.46 0.47 RG
+530 450 m 522.79 453.47 l S
+1.50 w
+0.05 0.46 0.47 RG
+485 310 m 530 310 l S
+1.50 w
+0.05 0.46 0.47 RG
+530 310 m 522.79 306.53 l S
+1.50 w
+0.05 0.46 0.47 RG
+530 310 m 522.79 313.47 l S
+1.40 w
+0.27 0.53 0.55 RG
+655 372 m 655 235 l S
+1.40 w
+0.27 0.53 0.55 RG
+655 235 m 651.53 242.21 l S
+1.40 w
+0.27 0.53 0.55 RG
+655 235 m 658.47 242.21 l S
+1.50 w
+0.05 0.46 0.47 RG
+370 335 m 370 295 l S
+1.50 w
+0.05 0.46 0.47 RG
+370 295 m 366.53 302.21 l S
+1.50 w
+0.05 0.46 0.47 RG
+370 295 m 373.47 302.21 l S
+1.40 w
+0.27 0.53 0.55 RG
+200 208 m 235 208 l S
+1.40 w
+0.27 0.53 0.55 RG
+235 208 m 227.79 204.53 l S
+1.40 w
+0.27 0.53 0.55 RG
+235 208 m 227.79 211.47 l S
+1.30 w
+0.27 0.53 0.55 RG
+120 120 m 120 95 l S
+1.30 w
+0.27 0.53 0.55 RG
+120 95 m 116.53 102.21 l S
+1.30 w
+0.27 0.53 0.55 RG
+120 95 m 123.47 102.21 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 60 m 370 37 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 37 m 366.53 44.21 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 37 m 373.47 44.21 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 60 m 370 95 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 95 m 373.47 87.79 l S
+1.30 w
+0.27 0.53 0.55 RG
+370 95 m 366.53 87.79 l S
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+214 454 Td
+(renderiza) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+494 458 Td
+(compoe) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+494 318 Td
+(compoe) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+664 295 Td
+(usa quando logado) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+380 315 Td
+(roteia paginas) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+165 216 Td
+(estrutura) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+128 105 Td
+(usa) Tj
+ET
+BT
+/F1 8.50 Tf
+0.32 0.40 0.43 rg
+379 75 Td
+(le / grava) Tj
+ET
+0.80 w
+0.84 0.90 0.89 RG
+0.87 0.93 0.93 rg
+40 495 112 18 re B
+BT
+/F2 9 Tf
+0.05 0.46 0.47 rg
+52 500 Td
+(Diagrama UML) Tj
+ET
+0.80 w
+0.84 0.90 0.89 RG
+0.93 0.96 1 rg
+165 495 170 18 re B
+BT
+/F1 9 Tf
+0.09 0.20 0.23 rg
+177 500 Td
+(Componente + persistencia) Tj
+ET
+BT
+/F1 8.80 Tf
+0.32 0.40 0.43 rg
+355 500 Td
+(Legenda: caixas representam componentes React ou agrupamentos funcionais.) Tj
+ET
+endstream
+endobj
+4 0 obj
+<< /Type /Page /Parent 5 0 R /MediaBox [0 0 842 595] /Resources << /Font << /F1 1 0 R /F2 2 0 R >> >> /Contents 3 0 R >>
+endobj
+5 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+6 0 obj
+<< /Type /Catalog /Pages 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000008469 00000 n 
+0000008605 00000 n 
+0000008662 00000 n 
+trailer
+<< /Size 7 /Root 6 0 R >>
+startxref
+8711
+%%EOF
