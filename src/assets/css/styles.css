@@ -183,6 +183,71 @@ body{
     background: linear-gradient(135deg, #1B3334 0%, #1A1A1A 100%);
 }
 
+.pagina-login-container {
+    width: 100%;
+    min-height: calc(100vh - 220px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: linear-gradient(135deg, var(--color-green-light) 0%, var(--color-light) 100%);
+}
+
+.dark-mode .pagina-login-container {
+    background: linear-gradient(135deg, #1B3334 0%, #1A1A1A 100%);
+}
+
+.login-box {
+    width: 100%;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagina-login-container form {
+    margin: 0 auto;
+}
+
+.login-titulo-sistema {
+    text-align: center;
+    color: var(--color-green-dark);
+    margin-bottom: 24px;
+}
+
+.login-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.btn-entrar,
+.btn-cancelar {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color var(--transition), transform 0.2s ease;
+}
+
+.btn-entrar {
+    background-color: var(--color-green-dark);
+    color: #fff;
+}
+
+.btn-cancelar {
+    background-color: transparent;
+    color: var(--color-green-dark);
+    border: 2px solid var(--color-green-dark);
+}
+
+.btn-entrar:hover,
+.btn-cancelar:hover {
+    transform: translateY(-2px);
+}
+
 .pagina-contato .logo {
     padding: 20px 20px 10px;
     text-align: center;
@@ -415,9 +480,10 @@ textarea {
 .error-message {
     color: var(--color-error);
     font-size: 0.85rem;
-    font-weight: 600;
-    margin-top: 6px;
+    font-weight: 700;
+    margin-bottom: 18px;
     display: block;
+    text-align: center;
 }
 
 .contato-title {
