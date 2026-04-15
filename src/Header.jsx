@@ -1,7 +1,8 @@
 import React from 'react';
 import logo from './assets/imgs/logo_sem_fundo.png';
+import { MenuPerfil } from './MenuPerfil';
 
-function Header({ telaAtiva, setTelaAtiva, onToggleDarkMode, darkMode, onAdmin }) {
+function Header({ telaAtiva, setTelaAtiva, onToggleDarkMode, darkMode, onAdmin, isLogged, onLogout}) {
   return (
     <header className="navbar">
       <div className="navbar-container">
@@ -17,6 +18,21 @@ function Header({ telaAtiva, setTelaAtiva, onToggleDarkMode, darkMode, onAdmin }
           >
             Início
           </button>
+            {isLogged ? (
+              <button
+                className={`nav-link ${telaAtiva === 'dashboard' ? 'ativo' : ''}`}
+                onClick={() => setTelaAtiva('dashboard')}
+              >
+                dashboard
+              </button>
+            ) : (
+              <button 
+                className={`nav-link ${telaAtiva === 'login' ? 'ativo' : ''}`}
+                onClick={() => setTelaAtiva('login')}
+              >
+                Login
+              </button>
+            )}
           <button 
             className={`nav-link ${telaAtiva === 'sobre' ? 'ativo' : ''}`}
             onClick={() => setTelaAtiva('sobre')}
@@ -36,7 +52,7 @@ function Header({ telaAtiva, setTelaAtiva, onToggleDarkMode, darkMode, onAdmin }
             Contato
           </button>
         </nav>
-
+            
         <div className="navbar-controls">
           <button 
             className="btn-tema-flutuante"
@@ -52,6 +68,17 @@ function Header({ telaAtiva, setTelaAtiva, onToggleDarkMode, darkMode, onAdmin }
           >
             ⚙️
           </button>
+          {isLogged ? (
+            <MenuPerfil
+              isLogged={isLogged} 
+              onLogout={onLogout} 
+              setTelaAtiva={setTelaAtiva} 
+            />
+          ) : (
+            <button className="nav-link" onClick={() => setTelaAtiva('login')}>
+              Login
+            </button>
+          )}
         </div>
       </div>
     </header>

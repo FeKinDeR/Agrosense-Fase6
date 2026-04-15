@@ -14,7 +14,6 @@ function Card({ imagem, alt, resumo, detalhes, onSaibaMais }) {
   const handleSaibaMais = () => {
     if (onSaibaMais) {
       onSaibaMais();
-      return;
     }
 
     setAberto(!aberto);
