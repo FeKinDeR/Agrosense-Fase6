@@ -3,8 +3,8 @@ direction LR
 
 class Main {
   <<entrypoint>>
-  createRoot()
-  render(App)
+  +createRoot()
+  +render(App)
 }
 
 class App {
@@ -26,11 +26,6 @@ class Header {
   +onAdmin()
 }
 
-class Footer {
-  <<component>>
-  +setTelaAtiva()
-}
-
 class MenuPerfil {
   <<component>>
   +isLogged
@@ -40,13 +35,44 @@ class MenuPerfil {
 
 class Login {
   <<page>>
-  +onLogin()
-  +voltar()
+  +user
+  +pass
+  +erro
+  +handleAcessar()
 }
 
 class Dashboard {
   <<page>>
-  +telemetria
+  +dados
+  +apiOnline
+  +form
+  +carregarDados()
+  +adicionarLeitura()
+  +restaurarDados()
+}
+
+class CalculosFase7 {
+  <<service>>
+  +integrarTrapezios()
+  +media()
+  +classificarNdvi()
+  +formatarNumero()
+}
+
+class AgroSenseAPI {
+  <<python backend>>
+  +GET telemetria()
+  +POST telemetria()
+  +DELETE telemetria()
+  +inicializar_banco()
+}
+
+class SQLite {
+  <<database>>
+  +leituras
+  +INSERT leitura
+  +SELECT leituras
+  +DELETE leituras
 }
 
 class Contato {
@@ -71,18 +97,19 @@ class CardsPagina {
   <<component>>
   +paginaAtual
   +cardsPerPage
+  +irParaPagina()
 }
 
 class Card {
   <<component>>
   +aberto
   +mostrar
+  +handleSaibaMais()
 }
 
 class Equipe {
   <<page>>
   +membros
-  +values
 }
 
 class TecnologiasAgronegocios {
@@ -95,11 +122,12 @@ class LocalStorage {
   +darkMode
   +isLogged
   +mensagens
+  +leiturasFallback
 }
 
 Main --> App : renderiza
 App --> Header : compoe
-App --> Footer : compoe
+Header --> MenuPerfil : exibe se logado
 App --> Login : roteia
 App --> Dashboard : roteia
 App --> Contato : roteia
@@ -107,9 +135,12 @@ App --> AdminPanel : roteia
 App --> Sobre : roteia
 App --> Equipe : roteia
 App --> TecnologiasAgronegocios : roteia
-Header --> MenuPerfil : exibe se logado
-Sobre --> CardsPagina : utiliza
-CardsPagina --> Card : pagina
-App --> LocalStorage : darkMode/isLogged
+Sobre --> CardsPagina : usa
+CardsPagina --> Card : pagina cards
+Dashboard --> CalculosFase7 : calcula integrais
+Dashboard --> AgroSenseAPI : consome fetch
+AgroSenseAPI --> SQLite : persiste leituras
+Dashboard --> LocalStorage : fallback offline
+App --> LocalStorage : tema e login
 Contato --> LocalStorage : grava mensagens
-AdminPanel --> LocalStorage : le/remove mensagens
+AdminPanel --> LocalStorage : le e remove mensagens

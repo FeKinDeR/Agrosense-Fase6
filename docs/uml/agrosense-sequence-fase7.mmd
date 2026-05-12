@@ -1,0 +1,34 @@
+sequenceDiagram
+    autonumber
+    actor Usuario
+    participant React as Frontend React
+    participant Dashboard as Dashboard.jsx
+    participant API as API Python
+    participant DB as SQLite
+    participant Calculos as Calculos Fase 7
+
+    Usuario->>React: Acessa o site e faz login
+    React->>Dashboard: Renderiza dashboard autenticado
+    Dashboard->>API: GET /api/agrosense/telemetria
+    API->>DB: SELECT leituras ORDER BY minuto
+    DB-->>API: Retorna leituras do drone
+    API-->>Dashboard: JSON com metadados e leituras
+    Dashboard->>Calculos: integrarTrapezios(leituras)
+    Calculos-->>Dashboard: Area, energia, NDVI medio e status
+    Dashboard-->>Usuario: Exibe indicadores e mapa NDVI
+
+    Usuario->>Dashboard: Registra nova leitura
+    Dashboard->>API: POST /api/agrosense/telemetria
+    API->>API: Valida velocidade, NDVI, umidade e bateria
+    API->>DB: INSERT INTO leituras
+    DB-->>API: Gravacao confirmada
+    API->>DB: SELECT leituras atualizadas
+    DB-->>API: Historico atualizado
+    API-->>Dashboard: JSON atualizado
+    Dashboard->>Calculos: Recalcula integral e indicadores
+    Dashboard-->>Usuario: Atualiza tabela, cards e mapa
+
+    alt API Python indisponivel
+        Dashboard->>Dashboard: Usa JSON local e localStorage
+        Dashboard-->>Usuario: Exibe modo demonstracao local
+    end

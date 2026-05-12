@@ -22,6 +22,12 @@ Depois, acesse `http://localhost:5173`, entre com usuario `admin` e senha `1234`
 
 No dashboard, a area analisada e calculada pelo metodo dos trapezios, integrando a velocidade do drone ao longo do tempo e multiplicando pela faixa de aplicacao.
 
+## Documentacao UML
+
+- `DIAGRAMA_UML.md`: explicacao dos diagramas e relacao com os capitulos.
+- `docs/uml/agrosense-component-uml.mmd`: diagrama de classes/componentes.
+- `docs/uml/agrosense-sequence-fase7.mmd`: diagrama de sequencia do fluxo React -> Python -> SQLite.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
