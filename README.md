@@ -2,6 +2,26 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+## Fase 7 - AgroSense
+
+O projeto agora possui uma entrega funcional com React no front-end e Python com banco SQLite no back-end, alinhando os capitulos de consumo de API, Python com banco de dados e integrais.
+
+Para rodar a API Python:
+
+```bash
+python backend/agrosense_api.py
+```
+
+Para rodar o site:
+
+```bash
+npm run dev
+```
+
+Depois, acesse `http://localhost:5173`, entre com usuario `admin` e senha `1234` e abra o dashboard. Quando a API estiver ligada, o painel mostra `Python + SQLite conectado` e grava as leituras no arquivo `backend/agrosense.db`.
+
+No dashboard, a area analisada e calculada pelo metodo dos trapezios, integrando a velocidade do drone ao longo do tempo e multiplicando pela faixa de aplicacao.
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)

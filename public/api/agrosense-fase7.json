@@ -1,0 +1,17 @@
+{
+  "drone": "Drone Alpha-01",
+  "talhao": "Talhao Experimental 03",
+  "cultura": "Soja",
+  "tensaoBateria": 14.8,
+  "correnteMedia": 7.4,
+  "faixaAplicacao": 7,
+  "vazaoPadrao": 1.4,
+  "leituras": [
+    { "minuto": 0, "velocidade": 0, "ndvi": 0.73, "umidade": 42, "bateria": 96 },
+    { "minuto": 2, "velocidade": 4.6, "ndvi": 0.71, "umidade": 41, "bateria": 93 },
+    { "minuto": 4, "velocidade": 5.1, "ndvi": 0.68, "umidade": 39, "bateria": 89 },
+    { "minuto": 6, "velocidade": 4.8, "ndvi": 0.62, "umidade": 37, "bateria": 84 },
+    { "minuto": 8, "velocidade": 5.5, "ndvi": 0.58, "umidade": 35, "bateria": 78 },
+    { "minuto": 10, "velocidade": 5.0, "ndvi": 0.64, "umidade": 38, "bateria": 72 }
+  ]
+}

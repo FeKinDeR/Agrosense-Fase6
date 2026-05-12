@@ -1,12 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function AdminPanel({ voltar }) {
-  const [mensagens, setMensagens] = useState([]);
-
-  useEffect(() => {
-    const dados = JSON.parse(localStorage.getItem('mensagens') || '[]');
-    setMensagens(dados);
-  }, []);
+  const [mensagens, setMensagens] = useState(() => (
+    JSON.parse(localStorage.getItem('mensagens') || '[]')
+  ));
 
   const excluirMsg = (id) => {
     const filtradas = mensagens.filter(m => m.id !== id);

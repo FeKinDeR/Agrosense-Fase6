@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Card from './Card';
 
 function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
   const [paginaAtual, setPaginaAtual] = useState(1);
-
-  // Calcula o total de páginas
   const totalPaginas = Math.ceil(cards.length / cardsPerPage);
-
-  // Calcula os cards da página atual
-  const indexFinal = paginaAtual * cardsPerPage;
+  const paginaSegura = Math.min(paginaAtual, totalPaginas || 1);
+  const indexFinal = paginaSegura * cardsPerPage;
   const indexInicial = indexFinal - cardsPerPage;
   const cardsAtual = cards.slice(indexInicial, indexFinal);
-
-  // Volta pra primeira página quando mudar o número de cards
-  useEffect(() => {
-    setPaginaAtual(1);
-  }, [cards.length]);
 
   const irParaPagina = (numero) => {
     if (numero >= 1 && numero <= totalPaginas) {
@@ -27,7 +19,7 @@ function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
     <div className="pagina-cards">
       <div className="cards">
         {cardsAtual.map((card, index) => (
-          <Card 
+          <Card
             key={index}
             imagem={card.imagem}
             alt={card.alt}
@@ -40,19 +32,19 @@ function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
 
       {totalPaginas > 1 && (
         <div className="paginacao">
-          <button 
+          <button
             className="btn-pagina"
-            onClick={() => irParaPagina(paginaAtual - 1)}
-            disabled={paginaAtual === 1}
+            onClick={() => irParaPagina(paginaSegura - 1)}
+            disabled={paginaSegura === 1}
           >
-            ← Anterior
+            Anterior
           </button>
 
           <div className="numeros-paginas">
-            {Array.from({ length: totalPaginas }, (_, i) => i + 1).map(num => (
+            {Array.from({ length: totalPaginas }, (_, i) => i + 1).map((num) => (
               <button
                 key={num}
-                className={`pagina-numero ${paginaAtual === num ? 'ativo' : ''}`}
+                className={`pagina-numero ${paginaSegura === num ? 'ativo' : ''}`}
                 onClick={() => irParaPagina(num)}
               >
                 {num}
@@ -60,19 +52,21 @@ function CardsPagina({ cards, cardsPerPage = 3, mostrarInfoPaginacao = true }) {
             ))}
           </div>
 
-          <button 
+          <button
             className="btn-pagina"
-            onClick={() => irParaPagina(paginaAtual + 1)}
-            disabled={paginaAtual === totalPaginas}
+            onClick={() => irParaPagina(paginaSegura + 1)}
+            disabled={paginaSegura === totalPaginas}
           >
-            Próxima →
+            Proxima
           </button>
         </div>
       )}
 
-      {mostrarInfoPaginacao && <div className="info-paginacao">
-        <p>Página {paginaAtual} de {totalPaginas}</p>
-      </div>}
+      {mostrarInfoPaginacao && (
+        <div className="info-paginacao">
+          <p>Pagina {paginaSegura} de {totalPaginas}</p>
+        </div>
+      )}
     </div>
   );
 }

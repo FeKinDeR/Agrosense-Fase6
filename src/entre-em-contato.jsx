@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 
-function Contato({ voltar }) {
+function Contato() {
   const initialState = { nome: '', sobrenome: '', email: '', mensagem: '' };
   const [formData, setFormData] = useState(initialState);
   const [erros, setErros] = useState({});

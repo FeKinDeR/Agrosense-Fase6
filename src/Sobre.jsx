@@ -3,7 +3,7 @@ import imgEquipe from './assets/imgs/imagem_card_equipe.jpg';
 import imgProjeto from './assets/imgs/img-projeto-2.jpg';
 import CardsPagina from './CardsPagina';
 
-function Sobre({ voltar, irParaEquipe }) {
+function Sobre({ irParaEquipe }) {
   const cardsData = [
     {
       imagem: imgEquipe,

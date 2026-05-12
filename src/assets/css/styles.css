@@ -1633,6 +1633,340 @@ textarea {
     }
 }
 
+/* ============ DASHBOARD FASE 7 ============ */
+.dashboard-container {
+    width: min(1240px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 34px 0 56px;
+}
+
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 26px;
+}
+
+.dash-kicker {
+    display: inline-block;
+    color: var(--color-green-dark);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.dash-header h1,
+.section-title-row h2,
+.dash-side-panel h2 {
+    color: var(--color-dark);
+    margin-bottom: 8px;
+}
+
+.dash-header p,
+.section-title-row p,
+.dash-card small {
+    color: var(--color-medium);
+    line-height: 1.6;
+}
+
+.status-pill,
+.loading-tag,
+.data-source-tag {
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 800;
+    white-space: nowrap;
+    border: 1px solid currentColor;
+}
+
+.status-pill.bom {
+    color: #137a3f;
+    background: rgba(19, 122, 63, 0.1);
+}
+
+.status-pill.alerta {
+    color: #9a6a00;
+    background: rgba(154, 106, 0, 0.12);
+}
+
+.status-pill.critico {
+    color: #b42318;
+    background: rgba(180, 35, 24, 0.12);
+}
+
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.dash-card,
+.mapa-simulado,
+.dash-side-panel,
+.dash-table-section {
+    background: var(--color-light);
+    border: 1px solid rgba(14, 118, 121, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 10px 26px rgba(14, 118, 121, 0.08);
+}
+
+.dash-card {
+    padding: 20px;
+    min-height: 150px;
+}
+
+.dash-card h3 {
+    color: var(--color-green-dark);
+    font-size: 1rem;
+    margin-bottom: 14px;
+}
+
+.dash-valor {
+    color: var(--color-dark);
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.progresso-bg {
+    width: 100%;
+    height: 10px;
+    background: rgba(14, 118, 121, 0.14);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progresso-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-green-dark), #38a169);
+    border-radius: inherit;
+}
+
+.dash-main-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.8fr);
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.mapa-simulado,
+.dash-side-panel,
+.dash-table-section {
+    padding: 22px;
+}
+
+.section-title-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.loading-tag {
+    color: var(--color-green-dark);
+    background: rgba(14, 118, 121, 0.1);
+    font-size: 0.82rem;
+}
+
+.data-source-tag {
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.82rem;
+}
+
+.data-source-tag.online {
+    color: #137a3f;
+    background: rgba(19, 122, 63, 0.1);
+}
+
+.data-source-tag.offline {
+    color: #9a6a00;
+    background: rgba(154, 106, 0, 0.12);
+}
+
+.ndvi-map {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 10px;
+}
+
+.ndvi-cell {
+    min-height: 120px;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: inset 0 -30px 80px rgba(0, 0, 0, 0.15);
+}
+
+.ndvi-cell span {
+    font-size: 0.82rem;
+    font-weight: 700;
+    opacity: 0.9;
+}
+
+.ndvi-cell strong {
+    font-size: 1.7rem;
+}
+
+.ndvi-cell.bom {
+    background: #168a4a;
+}
+
+.ndvi-cell.alerta {
+    background: #c28a0e;
+}
+
+.ndvi-cell.critico {
+    background: #b9382d;
+}
+
+.telemetry-form {
+    max-width: none;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    animation: none;
+    overflow: visible;
+}
+
+.telemetry-form::before {
+    content: none;
+}
+
+.telemetry-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+    color: var(--color-green-dark);
+    font-weight: 800;
+}
+
+.telemetry-form input {
+    transform: none;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.btn-primary-action,
+.btn-secondary-action {
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary-action {
+    background: var(--color-green-dark);
+    color: #ffffff;
+    border: 1px solid var(--color-green-dark);
+}
+
+.btn-secondary-action {
+    background: transparent;
+    color: var(--color-green-dark);
+    border: 1px solid var(--color-green-dark);
+}
+
+.btn-primary-action:hover,
+.btn-secondary-action:hover {
+    transform: translateY(-2px);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.telemetry-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 620px;
+}
+
+.telemetry-table th,
+.telemetry-table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid rgba(14, 118, 121, 0.14);
+    text-align: left;
+}
+
+.telemetry-table th {
+    color: var(--color-green-dark);
+    background: rgba(14, 118, 121, 0.08);
+}
+
+.dark-mode .dash-card,
+.dark-mode .mapa-simulado,
+.dark-mode .dash-side-panel,
+.dark-mode .dash-table-section {
+    background: #1f1f1f;
+    border-color: rgba(76, 175, 80, 0.22);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
+}
+
+.dark-mode .dash-header p,
+.dark-mode .section-title-row p,
+.dark-mode .dash-card small {
+    color: #cfe4d2;
+}
+
+.dark-mode .telemetry-table th {
+    background: rgba(76, 175, 80, 0.12);
+}
+
+@media (max-width: 980px) {
+    .dash-grid,
+    .dash-main-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .dash-side-panel {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .dashboard-container {
+        width: min(100%, calc(100% - 24px));
+        padding-top: 24px;
+    }
+
+    .dash-header,
+    .section-title-row {
+        flex-direction: column;
+    }
+
+    .dash-grid,
+    .dash-main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .status-pill,
+    .loading-tag,
+    .data-source-tag {
+        white-space: normal;
+    }
+}
 /* ============ TECNOLOGIAS AGRONEGÓCIOS ============ */
 .tecnologias-section {
     width: 100%;
